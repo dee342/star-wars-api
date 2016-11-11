@@ -1,0 +1,26 @@
+<section id="main">
+    <a href="./#/characters"><h3><- Back to Characters list</h3></a>
+
+    <div class="main-content">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th colspan="50">Index</th>
+                <th colspan="200">Title</th>
+                <th colspan="60">Release Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="film in filmsList | filter: searchFilter">
+                <td colspan="50">{{$index + 1}}</td>
+                <td colspan="200">
+                    {{film.data.title}}
+                </td>
+                <td colspan="60">
+                    {{film.data.release_date | date:'fullDate'}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

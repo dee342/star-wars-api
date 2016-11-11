@@ -1,0 +1,22 @@
+
+    <input type="text" ng-model="nameFilter" placeholder="Search..."/>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th colspan="4"><h1>Star Wars Characters</h1></th>
+        </tr>
+        <tr>
+            <th colspan="4">Index</th>
+            <th colspan="4">Name</th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="character in charactersList | filter: searchFilter">
+            <td colspan="4">{{$index + 1}}</td>
+            <td colspan="4">
+                <a href="#/characters/{{character.name}}">
+                    {{character.name}}
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>

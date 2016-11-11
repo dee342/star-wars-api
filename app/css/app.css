@@ -1,0 +1,53 @@
+/* app css stylesheet */
+
+body {
+    margin: 0;
+    padding: 0;
+/ / background-color: #09094c;
+ //   background-image: url('../images/space.png');
+ //   background-image-repeat: no-repeat center;
+
+}
+
+h1 {
+    color: white;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+
+    width:75%;
+
+}
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
